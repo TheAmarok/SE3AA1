@@ -1,7 +1,7 @@
 # SE3AA1
 _Repository für das Assignment  zu ”Ausgewählte Aspekte des Software-Engineering I“_
 
-Ziel des Projektes ist es, eine Webanwendung für das Verwalten von Kontakten zu entwickeln.
+Ziel des Projektes ist es, eine Webanwendung für das Verwalten von Kontakten zu entwickeln. Dafür wird die H2 mit Spring Data JPA verwendet.
 ![E-R-Diagramm der Anwendung](ER-Diagramm.png)
 
 Personen haben jeweils einen Namen, Kontaktdaten, eine Anrede und eine Beschreibung.
