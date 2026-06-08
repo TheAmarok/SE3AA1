@@ -1,8 +1,8 @@
-package repository;
+package com.Kontakt_Kartei.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import entity.BereichEntity;
+import com.Kontakt_Kartei.demo.entity.BereichEntity;
 
 public interface BereichRepository extends JpaRepository<BereichEntity, Long> {
 
