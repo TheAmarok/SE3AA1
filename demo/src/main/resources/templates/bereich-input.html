@@ -2,26 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Person Angeben</title>
+    <title>Bereich Angeben</title>
 </head>
 <body>
 
-  <form th:action="@{/personen/speichern}"
-        th:object="${person}"
-        method="post">
+<form th:action="@{/bereiche/speichern}"
+      th:object="${bereich}"
+      method="post">
 
-    <input type="hidden" th:field="*{person_id}">
+    <input type="hidden" th:field="*{bereich_id}">
 
     <input th:field="*{name}">
-    <input th:field="*{anrede}">
     <input th:field="*{kontaktdaten}">
     <input th:field="*{beschreibung}">
 
     <button type="submit" >
-      Speichern
+        Speichern
     </button>
 
-  </form>
+</form>
 
 </body>
 </html>

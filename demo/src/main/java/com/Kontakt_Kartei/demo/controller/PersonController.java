@@ -1,6 +1,5 @@
 package com.Kontakt_Kartei.demo.controller;
 
-import com.Kontakt_Kartei.demo.entity.PersonEntity;
 import com.Kontakt_Kartei.demo.record.PersonRecord;
 import com.Kontakt_Kartei.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;

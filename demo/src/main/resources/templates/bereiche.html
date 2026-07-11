@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bereiche</title>
+</head>
+<body>
+
+<table>
+
+    <tr>
+        <th>Name</th>
+        <th>Anrede</th>
+        <th>Kontakt</th>
+        <th>Beschreibung</th>
+    </tr>
+
+    <tr th:each="bereich : ${bereiche}">
+
+        <td th:text="${bereich.name()}"></td>
+
+        <td th:text="${bereich.kontaktdaten()}"></td>
+
+        <td th:text="${bereich.beschreibung()}"></td>
+
+        <td>
+            <button>
+                <a th:href="@{/bereiche/bearbeiten/{id}(id=${bereich.bereich_id()})}">
+                    Bearbeiten
+                </a>
+            </button>
+            <button onclick="return confirm('Wirklich löschen?')">
+                <a th:href="@{/bereiche/loeschen/{id}(id=${bereich.bereich_id()})}">
+                    Löschen
+                </a>
+            </button>
+        </td>
+
+    </tr>
+
+</table>
+
+<button>
+    <a th:href="@{/bereiche/neuer-bereich}">
+        Bereich Hinzufügen
+    </a>
+</button>
+
+</body>
+</html>
