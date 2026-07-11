@@ -31,7 +31,7 @@
                         Bearbeiten
                     </a>
                 </button>
-                <button>
+                <button onclick="return confirm('Wirklich löschen?')">
                     <a th:href="@{/personen/loeschen/{id}(id=${person.person_id()})}">
                         Löschen
                     </a>

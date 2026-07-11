@@ -57,4 +57,13 @@ public class PersonController {
         return "person-input";
     }
 
+    @GetMapping("/loeschen/{id}")
+    public String delete(
+            @PathVariable Long id) {
+
+        _serviceP.delete(id);
+
+        return "redirect:/personen";
+    }
+
 }
