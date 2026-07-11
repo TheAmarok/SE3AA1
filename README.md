@@ -15,16 +15,12 @@ Aufgrund der N-M-Relation wird eine Join-Tabelle benötigt, welche von JPA autom
 ## Anforderungen
 An das Projekt werden folgende Anforderungen gestellt:
 
-- [ ] Verwendet Java, Maven und Spring Boot
+- [x] Verwendet Java, Maven und Spring Boot
 - [ ] Ist eine Web-Anwendung
-- [ ] Die Daten sind Persistent
-- [ ] Es wird eine der folgenden Persistenz-APIs verwendet
-    - H2 mit JPA
+- [x] Die Daten sind Persistent
+- [x] Es wird eine der folgenden Persistenz-APIs verwendet
     - H2 mit Spring Data JPA
-    - Cassandra mit Spring Data
-    - MongoDB mit Spring Data
-    - Neo4j mit Spring Data
-- [ ] Die Anwendung verwendet zwei Tabellen
+- [x] Die Anwendung verwendet zwei Tabellen
 - [ ] Create, Read, Update und Delete Operationen werden unterstützt.
 - [ ] Daten sollen in Datei auf Festplatte/SSD geschrieben werden.
 - [ ] Wird kein H2 verwendet, muss eine docker-compose.yml enthalten sein.
@@ -77,9 +73,9 @@ An das Projekt werden folgende Anforderungen gestellt:
 
 #### Bewertungserleichterung
 - [ ] ``mvnw spring-boot:run`` im Hauptverzeichnis via Maven Wrapper soll Anwendung starten
-- [ ] Anwendung ist auf Port 8080 erreichbar
-- [ ] Bei H2 ist die H2-Konsole aktiviert
-- [ ] Bei H2 ist die H2-Konsole auf ``localhost:8080/h2-console/`` erreichbar
+- [x] Anwendung ist auf Port 8080 erreichbar
+- [x] Bei H2 ist die H2-Konsole aktiviert
+- [x] Bei H2 ist die H2-Konsole auf ``localhost:8080/h2-console/`` erreichbar
 
 #### Anforderungen ans Video
 - [ ] Dient als Tutorial für neuen Endanwender
