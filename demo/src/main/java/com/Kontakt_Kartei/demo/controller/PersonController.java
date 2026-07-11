@@ -1,13 +1,11 @@
 package com.Kontakt_Kartei.demo.controller;
 
 import com.Kontakt_Kartei.demo.entity.PersonEntity;
+import com.Kontakt_Kartei.demo.record.PersonRecord;
 import com.Kontakt_Kartei.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 
 @Controller
@@ -34,18 +32,29 @@ public class PersonController {
     public String showForm(Model model) {
 
         model.addAttribute("person",
-                new PersonEntity());
+                new PersonRecord(null, "","","",""));
 
         return "person-input";
     }
 
     @PostMapping("/speichern")
-    public String save(
-            @ModelAttribute PersonEntity person) {
+    public String save(@ModelAttribute PersonRecord person) {
 
         _serviceP.save(person);
 
         return "redirect:/personen";
+    }
+
+    @GetMapping("/bearbeiten/{id}")
+    public String edit(
+            @PathVariable Long id,
+            Model model) {
+
+        model.addAttribute(
+                "person",
+                _serviceP.findById(id).get());
+
+        return "person-input";
     }
 
 }
