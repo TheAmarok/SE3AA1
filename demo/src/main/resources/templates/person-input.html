@@ -6,9 +6,11 @@
 </head>
 <body>
 
-  <form th:action="@{/speichern}"
+  <form th:action="@{/personen/speichern}"
         th:object="${person}"
         method="post">
+
+    <input type="hidden" th:field="*{person_id}">
 
     <input th:field="*{name}">
     <input th:field="*{anrede}">
