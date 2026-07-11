@@ -12,7 +12,7 @@ import jakarta.persistence.ManyToMany;
 public class BereichEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private long bereich_id;
 	
 	private String name;
 	private String kontaktdaten;

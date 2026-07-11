@@ -45,7 +45,7 @@ An das Projekt werden folgende Anforderungen gestellt:
 
 #### Quellcode Anforderungen
 - [ ] Code ist nicht KI-Generiert
-- [ ] Bei H2 Verwendung muss das Datenmodell normalisiert sein.
+- [x] Bei H2 Verwendung muss das Datenmodell normalisiert sein.
 - [ ] Catch Blöcke des Exception Handeling müssen den Zwischenfall immer loggen und wenn Sinnvoll den Benutzer darauf hinweisen.
 - [ ] Import-Anweisungen gelten für Klassen, keine Wildcards mit *
 - [ ] Kommentare sollten vorhanden sein

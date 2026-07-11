@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neue Person</title>
+</head>
+<body>
+
+  <form th:action="@{/personen/speichern}"
+        th:object="${person}"
+        method="post">
+
+    <input th:field="*{name}">
+    <input th:field="*{anrede}">
+    <input th:field="*{kontaktdaten}">
+    <input th:field="*{beschreibung}">
+
+    <button type="submit">
+      Speichern
+    </button>
+
+  </form>
+
+</body>
+</html>
