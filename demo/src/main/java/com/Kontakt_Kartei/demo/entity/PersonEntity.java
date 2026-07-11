@@ -14,7 +14,7 @@ import jakarta.persistence.ManyToMany;
 public class PersonEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long person_id;
+	private Long person_id;
 	
 	private String name;
 	private String anrede;
@@ -27,11 +27,11 @@ public class PersonEntity {
 				inverseJoinColumns 	= @JoinColumn(name = "bereich_id"))
 	private Set<BereichEntity> bereiche;
 
-	public long getPerson_id() {
+	public Long getPerson_id() {
 		return person_id;
 	}
 
-	public void setPerson_id(long person_id) {
+	public void setPerson_id(Long person_id) {
 		this.person_id = person_id;
 	}
 
