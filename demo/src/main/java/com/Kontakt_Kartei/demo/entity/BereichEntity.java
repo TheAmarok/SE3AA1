@@ -12,7 +12,7 @@ import jakarta.persistence.ManyToMany;
 public class BereichEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long bereich_id;
+	private Long bereich_id;
 	
 	private String name;
 	private String kontaktdaten;
@@ -20,4 +20,36 @@ public class BereichEntity {
 	
 	@ManyToMany(mappedBy = "bereiche")
 	private Set<PersonEntity> personen;
+
+	public Long getBereich_id() {
+		return bereich_id;
+	}
+
+	public void setBereich_id(Long bereich_id) {
+		this.bereich_id = bereich_id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getKontaktdaten() {
+		return kontaktdaten;
+	}
+
+	public void setKontaktdaten(String kontaktdaten) {
+		this.kontaktdaten = kontaktdaten;
+	}
+
+	public String getBeschreibung() {
+		return beschreibung;
+	}
+
+	public void setBeschreibung(String beschreibung) {
+		this.beschreibung = beschreibung;
+	}
 }
