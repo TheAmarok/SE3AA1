@@ -30,9 +30,8 @@ public class PersonService {
         return _datenbankP.save(person);
     }
 
-    public PersonRecord findById(Long id) {
-        PersonEntity person = _datenbankP.findById(id).orElseThrow();
-        return toRecord(_datenbankP.findById(id));
+    public Optional<PersonRecord> findById(Long id) {
+        return toRecordOptional(_datenbankP.findById(id));
     }
 
     public void delete(Long id) {
@@ -47,5 +46,19 @@ public class PersonService {
                 entity.getKontaktdaten(),
                 entity.getBeschreibung()
         );
+    }
+
+    private Optional<PersonRecord> toRecordOptional(Optional<PersonEntity> input) {
+        if (input.isEmpty()) {
+            return Optional.empty();
+        }
+        PersonEntity entity = input.get();
+        return Optional.of(new PersonRecord(
+                entity.getPerson_id(),
+                entity.getName(),
+                entity.getAnrede(),
+                entity.getKontaktdaten(),
+                entity.getBeschreibung()
+        ));
     }
 }
