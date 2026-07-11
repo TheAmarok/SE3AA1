@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personen</title>
+</head>
+<body>
+
+    <table>
+
+        <tr>
+            <th>Name</th>
+            <th>Anrede</th>
+            <th>Kontakt</th>
+            <th>Beschreibung</th>
+        </tr>
+
+        <tr th:each="person : ${personen}">
+
+            <td th:text="${person.name}"></td>
+
+            <td th:text="${person.anrede}"></td>
+
+            <td th:text="${person.kontaktdaten}"></td>
+
+            <td th:text="${person.beschreibung}"></td>
+
+        </tr>
+
+    </table>
+
+</body>
+</html>
