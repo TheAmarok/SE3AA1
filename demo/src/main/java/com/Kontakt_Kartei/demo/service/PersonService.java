@@ -26,8 +26,11 @@ public class PersonService {
                 .toList();
     }
 
-    public PersonEntity save(PersonEntity person) {
-        return _datenbankP.save(person);
+    public PersonRecord save(PersonRecord record) {
+
+        PersonEntity entity = toEntity(record);
+        PersonEntity saved = _datenbankP.save(entity);
+        return toRecord(saved);
     }
 
     public Optional<PersonRecord> findById(Long id) {
@@ -60,5 +63,18 @@ public class PersonService {
                 entity.getKontaktdaten(),
                 entity.getBeschreibung()
         ));
+    }
+
+    private PersonEntity toEntity(PersonRecord record) {
+
+        PersonEntity entity = new PersonEntity();
+
+        entity.setPerson_id(record.person_id());
+        entity.setName(record.name());
+        entity.setAnrede(record.anrede());
+        entity.setKontaktdaten(record.kontaktdaten());
+        entity.setBeschreibung(record.beschreibung());
+
+        return entity;
     }
 }
