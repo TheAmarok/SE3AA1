@@ -33,11 +33,10 @@ public class PersonService {
                 .toList();
     }
 
-    public PersonRecord save(PersonRecord record) {
+    public void save(PersonRecord record) {
 
         PersonEntity entity = toEntity(record);
-        PersonEntity saved = _datenbankP.save(entity);
-        return toRecord(saved);
+        _datenbankP.save(entity);
     }
 
     public Optional<PersonRecord> findById(Long id) {
