@@ -53,4 +53,12 @@ public class BereichEntity {
 	public void setBeschreibung(String beschreibung) {
 		this.beschreibung = beschreibung;
 	}
+
+	public Set<PersonEntity> getPersonen() {
+		return personen;
+	}
+
+	public void setPersonen(Set<PersonEntity> personen) {
+		this.personen = personen;
+	}
 }

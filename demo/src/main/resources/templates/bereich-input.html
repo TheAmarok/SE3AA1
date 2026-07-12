@@ -12,26 +12,20 @@
 
         <input type="hidden" th:field="*{bereich_id}">
 
-        <input th:field="*{name}">
-        <input th:field="*{kontaktdaten}">
-        <input th:field="*{beschreibung}">
+        <input th:field="*{name}" placeholder="Name">
+        <input th:field="*{kontaktdaten}" placeholder="Kontakt">
+        <input th:field="*{beschreibung}" placeholder="Beschreibung">
 
         <button type="submit" >
             Speichern
         </button>
+        <button>
+            <a th:href="@{/bereiche}">
+                Abbrechen
+            </a>
+        </button>
 
     </form>
-
-    <button>
-        <a th:href="@{/bereiche}">
-            Abbrechen
-        </a>
-    </button>
-    <button>
-        <a th:href="@{/}">
-            Hauptseite
-        </a>
-    </button>
 
 </body>
 </html>
