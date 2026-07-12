@@ -1,21 +1,27 @@
 package com.Kontakt_Kartei.demo.controller;
 
 import com.Kontakt_Kartei.demo.record.PersonRecord;
+import com.Kontakt_Kartei.demo.service.BereichService;
 import com.Kontakt_Kartei.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 @RequestMapping("/personen")
 public class PersonController {
 
     private final PersonService _serviceP;
+    private final BereichService _serviceB;
 
     @Autowired
-    public PersonController(PersonService service) {
-        this._serviceP = service;
+    public PersonController(PersonService serviceP, BereichService serviceB) {
+        this._serviceP = serviceP;
+        this._serviceB = serviceB;
     }
 
     @GetMapping
@@ -30,8 +36,13 @@ public class PersonController {
     @GetMapping("/neue-person")
     public String showForm(Model model) {
 
+        List<Long> empty = new ArrayList<>();
+
         model.addAttribute("person",
-                new PersonRecord(null, "","","",""));
+                new PersonRecord(null, "","","","", empty));
+        model.addAttribute(
+                "bereiche",
+                _serviceB.findAll());
 
         return "person-input";
     }
@@ -52,6 +63,9 @@ public class PersonController {
         model.addAttribute(
                 "person",
                 _serviceP.findById(id).get());
+        model.addAttribute(
+                "bereiche",
+                _serviceB.findAll());
 
         return "person-input";
     }

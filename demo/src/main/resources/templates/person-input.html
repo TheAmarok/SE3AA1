@@ -17,6 +17,18 @@
     <input th:field="*{kontaktdaten}">
     <input th:field="*{beschreibung}">
 
+    <select multiple size="6" th:field="*{bereichIds}">
+      <div th:each="bereich : ${bereiche}">
+        <label>
+          <input type="checkbox"
+                 th:field="*{bereichIds}"
+                 th:value="${bereich.bereich_id()}">
+
+          <span th:text="${bereich.name()}"></span>
+        </label>
+      </div>
+    </select>
+
     <button type="submit" >
       Speichern
     </button>
