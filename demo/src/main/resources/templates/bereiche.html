@@ -17,20 +17,20 @@
 
     <tr th:each="bereich : ${bereiche}">
 
-        <td th:text="${bereich.name()}"></td>
+        <td th:text="${bereich.name}"></td>
 
-        <td th:text="${bereich.kontaktdaten()}"></td>
+        <td th:text="${bereich.kontaktdaten}"></td>
 
-        <td th:text="${bereich.beschreibung()}"></td>
+        <td th:text="${bereich.beschreibung}"></td>
 
         <td>
             <button>
-                <a th:href="@{/bereiche/bearbeiten/{id}(id=${bereich.bereich_id()})}">
+                <a th:href="@{/bereiche/bearbeiten/{id}(id=${bereich.bereich_id})}">
                     Bearbeiten
                 </a>
             </button>
             <button onclick="return confirm('Wirklich löschen?')">
-                <a th:href="@{/bereiche/loeschen/{id}(id=${bereich.bereich_id()})}">
+                <a th:href="@{/bereiche/loeschen/{id}(id=${bereich.bereich_id})}">
                     Löschen
                 </a>
             </button>

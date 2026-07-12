@@ -1,6 +1,6 @@
 package com.Kontakt_Kartei.demo.controller;
 
-import com.Kontakt_Kartei.demo.record.BereichRecord;
+import com.Kontakt_Kartei.demo.entity.BereichEntity;
 import com.Kontakt_Kartei.demo.service.BereichService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,13 +31,13 @@ public class BereichController {
     public String showForm(Model model) {
 
         model.addAttribute("bereich",
-                new BereichRecord(null, "","",""));
+                new BereichEntity());
 
         return "bereich-input";
     }
 
     @PostMapping("/speichern")
-    public String save(@ModelAttribute BereichRecord bereich) {
+    public String save(@ModelAttribute BereichEntity bereich) {
 
         _serviceB.save(bereich);
 

@@ -22,9 +22,9 @@
       <div th:each="bereich : ${bereiche}">
         <label>
           <input type="checkbox"
-                 th:field="*{bereichIds}"
-                 th:value="${bereich.bereich_id()}">
-          <span th:text="${bereich.name()}"></span>
+                 th:field="*{bereiche}"
+                 th:value="${bereich.bereich_id}">
+          <span th:text="${bereich.name}"></span>
         </label>
       </div>
     </div>

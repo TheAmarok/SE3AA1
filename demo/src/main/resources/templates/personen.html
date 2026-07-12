@@ -17,22 +17,22 @@
 
         <tr th:each="person : ${personen}">
 
-            <td th:text="${person.name()}"></td>
+            <td th:text="${person.name}"></td>
 
-            <td th:text="${person.anrede()}"></td>
+            <td th:text="${person.anrede}"></td>
 
-            <td th:text="${person.kontaktdaten()}"></td>
+            <td th:text="${person.kontaktdaten}"></td>
 
-            <td th:text="${person.beschreibung()}"></td>
+            <td th:text="${person.beschreibung}"></td>
 
             <td>
                 <button>
-                    <a th:href="@{/personen/bearbeiten/{id}(id=${person.person_id()})}">
+                    <a th:href="@{/personen/bearbeiten/{id}(id=${person.person_id})}">
                         Bearbeiten
                     </a>
                 </button>
                 <button onclick="return confirm('Wirklich löschen?')">
-                    <a th:href="@{/personen/loeschen/{id}(id=${person.person_id()})}">
+                    <a th:href="@{/personen/loeschen/{id}(id=${person.person_id})}">
                         Löschen
                     </a>
                 </button>

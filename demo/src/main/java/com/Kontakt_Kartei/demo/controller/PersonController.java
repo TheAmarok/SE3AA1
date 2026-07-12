@@ -1,6 +1,6 @@
 package com.Kontakt_Kartei.demo.controller;
 
-import com.Kontakt_Kartei.demo.record.PersonRecord;
+import com.Kontakt_Kartei.demo.entity.PersonEntity;
 import com.Kontakt_Kartei.demo.service.BereichService;
 import com.Kontakt_Kartei.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,10 +36,8 @@ public class PersonController {
     @GetMapping("/neue-person")
     public String showForm(Model model) {
 
-        List<Long> empty = new ArrayList<>();
-
         model.addAttribute("person",
-                new PersonRecord(null, "","","","", empty));
+                new PersonEntity());
         model.addAttribute(
                 "bereiche",
                 _serviceB.findAll());
@@ -48,7 +46,7 @@ public class PersonController {
     }
 
     @PostMapping("/speichern")
-    public String save(@ModelAttribute PersonRecord person) {
+    public String save(@ModelAttribute PersonEntity person) {
 
         _serviceP.save(person);
 
