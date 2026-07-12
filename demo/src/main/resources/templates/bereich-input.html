@@ -6,21 +6,32 @@
 </head>
 <body>
 
-<form th:action="@{/bereiche/speichern}"
-      th:object="${bereich}"
-      method="post">
+    <form th:action="@{/bereiche/speichern}"
+          th:object="${bereich}"
+          method="post">
 
-    <input type="hidden" th:field="*{bereich_id}">
+        <input type="hidden" th:field="*{bereich_id}">
 
-    <input th:field="*{name}">
-    <input th:field="*{kontaktdaten}">
-    <input th:field="*{beschreibung}">
+        <input th:field="*{name}">
+        <input th:field="*{kontaktdaten}">
+        <input th:field="*{beschreibung}">
 
-    <button type="submit" >
-        Speichern
+        <button type="submit" >
+            Speichern
+        </button>
+
+    </form>
+
+    <button>
+        <a th:href="@{/bereiche}">
+            Abbrechen
+        </a>
     </button>
-
-</form>
+    <button>
+        <a th:href="@{/}">
+            Hauptseite
+        </a>
+    </button>
 
 </body>
 </html>

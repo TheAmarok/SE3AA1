@@ -17,16 +17,15 @@
     <input th:field="*{kontaktdaten}" placeholder="Kontakt">
     <input th:field="*{beschreibung}" placeholder="Beschreibung">
 
-    <div style="margin: 15px 0;">
       <p><strong>Bereiche auswählen:</strong></p>
       <div th:each="bereich : ${bereiche}">
         <label>
           <input type="checkbox"
                  name="bereichIds"
-                 th:value="${bereich.bereich_id}">
+                 th:value="${bereich.bereich_id}"
+                 th:checked="${person.bereiche.contains(bereich)}">
           <span th:text="${bereich.name}"></span>
         </label>
-      </div>
     </div>
 
     <button type="submit" >
@@ -34,6 +33,17 @@
     </button>
 
   </form>
+
+  <button>
+    <a th:href="@{/personen}">
+      Abbrechen
+    </a>
+  </button>
+  <button>
+    <a th:href="@{/}">
+      Hauptseite
+    </a>
+  </button>
 
 </body>
 </html>
