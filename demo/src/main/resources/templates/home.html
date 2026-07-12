@@ -6,45 +6,41 @@
 </head>
 <body>
     <h1>Bereiche</h1>
-
-
     <div th:each="bereich : ${bereiche}">
-
         <h2 th:text="${bereich.name}"></h2>
-
         <p>
             <strong>Kontakt:</strong>
             <span th:text="${bereich.kontaktdaten}"></span>
         </p>
-
         <p>
             <strong>Beschreibung:</strong>
             <span th:text="${bereich.beschreibung}"></span>
         </p>
-
+        <p>
+            Bearbeiten
+            Löschen
+        </p>
 
         <h3>Personen:</h3>
-
-
-        <ul>
-
-            <li th:each="person : ${bereich.personen}">
-                (
-                <span th:text="${person.anrede}"></span>
-                )
+        <div th:each="person : ${bereich.personen}">
+            <h4>
                 <span th:text="${person.name}"></span>
-                -
+            </h4>
+            
+            (
+            <span th:text="${person.anrede}"></span>
+            )
+            -
+            <span th:text="${person.kontaktdaten}"></span>
+
+            <p>
                 <span th:text="${person.beschreibung}"></span>
-                -
-                <span th:text="${person.kontaktdaten}"></span>
+            </p>
 
-            </li>
+            Bearbeiten - Löschen
 
-        </ul>
-
-
+        </div>
         <hr>
-
     </div>
 
     <button>
