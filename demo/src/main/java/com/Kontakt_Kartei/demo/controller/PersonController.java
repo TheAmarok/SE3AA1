@@ -1,5 +1,6 @@
 package com.Kontakt_Kartei.demo.controller;
 
+import com.Kontakt_Kartei.demo.entity.BereichEntity;
 import com.Kontakt_Kartei.demo.entity.PersonEntity;
 import com.Kontakt_Kartei.demo.service.BereichService;
 import com.Kontakt_Kartei.demo.service.PersonService;
@@ -8,8 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 @RequestMapping("/personen")
@@ -46,7 +48,20 @@ public class PersonController {
     }
 
     @PostMapping("/speichern")
-    public String save(@ModelAttribute PersonEntity person) {
+    public String save(
+            @ModelAttribute PersonEntity person,
+            @RequestParam(required = false) List<Long> bereichIds) {
+
+
+        Set<BereichEntity> bereiche = new HashSet<>();
+
+        if (bereichIds != null) {
+            for(Long id : bereichIds) {
+                bereiche.add(_serviceB.findById(id).get());
+            }
+        }
+
+        person.setBereiche(bereiche);
 
         _serviceP.save(person);
 

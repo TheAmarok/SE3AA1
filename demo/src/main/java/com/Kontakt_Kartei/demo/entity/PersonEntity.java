@@ -1,5 +1,6 @@
 package com.Kontakt_Kartei.demo.entity;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.Entity;
@@ -25,7 +26,7 @@ public class PersonEntity {
 	@JoinTable(	name 				= "person_bereich",
 				joinColumns 		= @JoinColumn(name = "person_id"),
 				inverseJoinColumns 	= @JoinColumn(name = "bereich_id"))
-	private Set<BereichEntity> bereiche;
+	private Set<BereichEntity> bereiche = new HashSet<BereichEntity>();
 
 	public Long getPerson_id() {
 		return person_id;

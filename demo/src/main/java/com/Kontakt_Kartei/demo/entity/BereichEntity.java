@@ -1,5 +1,6 @@
 package com.Kontakt_Kartei.demo.entity;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.Entity;
@@ -19,7 +20,7 @@ public class BereichEntity {
 	private String beschreibung;
 	
 	@ManyToMany(mappedBy = "bereiche")
-	private Set<PersonEntity> personen;
+	private Set<PersonEntity> personen = new HashSet<>();
 
 	public Long getBereich_id() {
 		return bereich_id;
