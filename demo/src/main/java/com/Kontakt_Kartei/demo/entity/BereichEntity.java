@@ -22,6 +22,13 @@ public class BereichEntity {
 	@ManyToMany(mappedBy = "bereiche")
 	private Set<PersonEntity> personen = new HashSet<>();
 
+	public void removePersonen() {
+		for (PersonEntity person : personen) {
+			person.getBereiche().remove(this);
+		}
+		personen.clear();
+	}
+
 	public Long getBereich_id() {
 		return bereich_id;
 	}
