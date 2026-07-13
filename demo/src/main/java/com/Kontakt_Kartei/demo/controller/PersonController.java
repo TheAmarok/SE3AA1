@@ -70,11 +70,7 @@ public class PersonController {
             }
         }
 
-        person.getBereiche().clear();
-
-        for (BereichEntity bereich : bereiche) {
-            person.addBereich(bereich);
-        }
+        person.setBereiche(bereiche);
 
         _serviceP.save(person);
 

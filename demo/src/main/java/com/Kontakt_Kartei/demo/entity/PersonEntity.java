@@ -76,14 +76,4 @@ public class PersonEntity {
 		this.bereiche = bereiche;
 	}
 
-	public void addBereich(BereichEntity bereich) {
-		bereiche.add(bereich);
-		bereich.getPersonen().add(this);
-	}
-
-	public void removeBereich(BereichEntity bereich) {
-		bereiche.remove(bereich);
-		bereich.getPersonen().remove(this);
-	}
-
 }
