@@ -5,42 +5,51 @@
     <title>Übersicht</title>
 </head>
 <body>
+
     <h1>Bereiche</h1>
     <div th:each="bereich : ${bereiche}">
-        <h2 th:text="${bereich.name}"></h2>
-        <p>
-            <strong>Kontakt:</strong>
-            <span th:text="${bereich.kontaktdaten}"></span>
-        </p>
-        <p>
-            <strong>Beschreibung:</strong>
-            <span th:text="${bereich.beschreibung}"></span>
-        </p>
-        <p>
-            Bearbeiten
-            Löschen
-        </p>
-
-        <h3>Personen:</h3>
-        <div th:each="person : ${bereich.personen}">
-            <h4>
-                <span th:text="${person.name}"></span>
-            </h4>
-            
-            (
-            <span th:text="${person.anrede}"></span>
-            )
-            -
-            <span th:text="${person.kontaktdaten}"></span>
-
+        <details>
+            <summary th:text="${bereich.name}">
+            </summary>
             <p>
-                <span th:text="${person.beschreibung}"></span>
+                <strong>Kontakt:</strong>
+                <span th:text="${bereich.kontaktdaten}"></span>
+            </p>
+            <p>
+                <strong>Beschreibung:</strong>
+                <span th:text="${bereich.beschreibung}"></span>
+            </p>
+            <p>
+                Bearbeiten
+                -
+                Löschen
             </p>
 
-            Bearbeiten - Löschen
+            <details th:each="person : ${bereich.personen}">
+                <summary th:text="${person.name}">
+                </summary>
+                <p>
+                    <strong>Anrede:</strong>
+                    <span th:text="${person.anrede}"></span>
+                </p>
+                <p>
+                    <strong>Kontakt:</strong>
+                    <span th:text="${person.kontaktdaten}"></span>
+                </p>
 
-        </div>
+                <p>
+                    <strong>Beschreibung:</strong>
+                    <span th:text="${person.beschreibung}"></span>
+                </p>
+
+                Bearbeiten
+                -
+                Löschen
+            </details>
+        </details>
+
         <hr>
+
     </div>
 
     <button>
