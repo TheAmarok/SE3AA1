@@ -38,7 +38,7 @@ An das Projekt werden folgende Anforderungen gestellt:
 - [x] Zahlen & Datumsformate passen zur Sprache
 - [x] Sicherheitsabfrage vor Löschoperation
 - [x] Texte haben guten farblichen Kontrast
-- [ ] Texte haben immer etwas Platz drum herum
+- [x] Texte haben immer etwas Platz drum herum
 - [x] Ungültige Eingaben werden sinnvoll behandelt
 - [x] Bedienung ist Intuitiv
 
@@ -62,7 +62,7 @@ An das Projekt werden folgende Anforderungen gestellt:
 - [ ] Keine Codeleichen
 - [ ] Alle Variablen müssen irgendwann ausgelesen/genutzt werden
 - [ ] Keine unnötigen Imports
-- [ ] Klassen sind in Packages
+- [x] Klassen sind in Packages
 - [x] Jedes Package enthält mindestens zwei Klassen
 - [ ] Verwende @Override wann immer möglich
 - [ ] Keine deprecated Klassen & Methoden
