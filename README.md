@@ -71,7 +71,7 @@ An das Projekt werden folgende Anforderungen gestellt:
 - [x] Verwende kein Lombok
 
 #### Bewertungserleichterung
-- [ ] ``mvnw spring-boot:run`` im Hauptverzeichnis via Maven Wrapper soll Anwendung starten
+- [x] ``mvnw spring-boot:run`` im Hauptverzeichnis via Maven Wrapper soll Anwendung starten
 - [x] Anwendung ist auf Port 8080 erreichbar
 - [x] Bei H2 ist die H2-Konsole aktiviert
 - [x] Bei H2 ist die H2-Konsole auf ``localhost:8080/h2-console/`` erreichbar
