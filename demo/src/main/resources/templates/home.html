@@ -51,12 +51,12 @@
 
                 <button>
                     <a th:href="@{/person-bearbeiten/{id}(id=${person.person_id})}">
-                        Bearbeiten
+                        Person Bearbeiten
                     </a>
                 </button>
                 <button onclick="return confirm('Wirklich löschen?')">
                     <a th:href="@{/person-loeschen/{id}(id=${person.person_id})}">
-                        Löschen
+                        Person Löschen
                     </a>
                 </button>
 
@@ -67,19 +67,21 @@
 
     </div>
 
+    <p>
+        <button>
+            <a th:href="@{/neuer-bereich}">
+                Bereich Hinzufügen
+            </a>
+        </button>
+        <button>
+            <a th:href="@{/personen/neue-person}">
+                Person Hinzufügen
+            </a>
+        </button>
+    </p>
     <button>
         <a th:href="@{/personen}">
             Personenliste
-        </a>
-    </button>
-    <button>
-        <a th:href="@{/neuer-bereich}">
-            Bereich Hinzufügen
-        </a>
-    </button>
-    <button>
-        <a th:href="@{/personen/neue-person}">
-            Person Hinzufügen
         </a>
     </button>
 

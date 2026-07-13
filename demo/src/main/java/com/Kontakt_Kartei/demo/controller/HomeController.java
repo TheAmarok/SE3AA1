@@ -62,7 +62,7 @@ public class HomeController {
 
         _serviceB.delete(id);
 
-        return "redirect:/home";
+        return "redirect:/";
     }
 
     @GetMapping("/person-bearbeiten/{id}")
@@ -94,6 +94,6 @@ public class HomeController {
 
         _serviceB.save(bereich);
 
-        return "redirect:/home";
+        return "redirect:/";
     }
 }
