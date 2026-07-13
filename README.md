@@ -28,11 +28,11 @@ An das Projekt werden folgende Anforderungen gestellt:
     - Thymeleaf
     - Statische HTML-Seite mit RestController & REST-API
     - CSS-Framework wie Bootstrap
-- [ ] Video für das Erklären der Anwendung ist erstellt.
+- [x] Video für das Erklären der Anwendung ist erstellt.
 
 #### Bewertungskriterien
 - [x] Funktional Korrekt
-- [ ] Funktional Robust
+- [x] Funktional Robust
 - [x] Oberfläche besitzt konsistentes Aussehen
 - [x] Oberfläche muss gut bedienbar sein
 - [x] Zahlen & Datumsformate passen zur Sprache
@@ -58,13 +58,13 @@ An das Projekt werden folgende Anforderungen gestellt:
 - [x] Quellcodezeilen sind nie länger als 120 Zeichen
 - [x] Methoden haben <50 Zeilen
 - [x] Einrückung & Leerzeichen sind einheitlich
-- [ ] Kein Duplicate Code
+- [x] Kein Duplicate Code
 - [x] Keine Codeleichen
 - [x] Alle Variablen müssen irgendwann ausgelesen/genutzt werden
 - [x] Keine unnötigen Imports
 - [x] Klassen sind in Packages
 - [x] Jedes Package enthält mindestens zwei Klassen
-- [ ] Verwende @Override wann immer möglich
+- [x] Verwende @Override wann immer möglich
 - [x] Keine deprecated Klassen & Methoden
 - [x] Einfache Datentransportklassen sind Records
 - [ ] Beachte Best Practices der Vorlesung
@@ -77,15 +77,15 @@ An das Projekt werden folgende Anforderungen gestellt:
 - [x] Bei H2 ist die H2-Konsole auf ``localhost:8080/h2-console/`` erreichbar
 
 #### Anforderungen ans Video
-- [ ] Dient als Tutorial für neuen Endanwender
-- [ ] Bildschirm abfilmen und auf Tonspur erklären
-- [ ] Zwei bis drei Minuten
-- [ ] Keine Bearbeitung des Videos (auch keine Schnitte)
-- [ ] Video ist mit VLC Media Player abspielbar
-- [ ] Auf moodle hochladen
-- [ ] Keine Hintergrundmusik
-- [ ] Keine Hintergrundgeräusche
-- [ ] Mit Headset/Mikrofon aufgenommen
-- [ ] Videoauflösung erlaubt lesen des Textes
-- [ ] Das Video darf nicht abrupt enden
-- [ ] Technische Details wie Quellcode werden
+- [x] Dient als Tutorial für neuen Endanwender
+- [x] Bildschirm abfilmen und auf Tonspur erklären
+- [x] Zwei bis drei Minuten
+- [x] Keine Bearbeitung des Videos (auch keine Schnitte)
+- [x] Video ist mit VLC Media Player abspielbar
+- [x] Auf moodle hochladen
+- [x] Keine Hintergrundmusik
+- [x] Keine Hintergrundgeräusche
+- [x] Mit Headset/Mikrofon aufgenommen
+- [x] Videoauflösung erlaubt lesen des Textes
+- [x] Das Video darf nicht abrupt enden
+- [x] Technische Details wie Quellcode werden weggelassen
