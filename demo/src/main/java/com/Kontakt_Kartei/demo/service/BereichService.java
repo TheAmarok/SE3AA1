@@ -2,6 +2,7 @@ package com.Kontakt_Kartei.demo.service;
 
 import com.Kontakt_Kartei.demo.entity.BereichEntity;
 import com.Kontakt_Kartei.demo.entity.PersonEntity;
+import com.Kontakt_Kartei.demo.exception.BereichMissingException;
 import com.Kontakt_Kartei.demo.repository.BereichRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +37,7 @@ public class BereichService {
     public void delete(Long id) {
 
         BereichEntity bereich = _datenbankB.findById(id)
-                .orElseThrow(() -> new RuntimeException("Bereich nicht gefunden"));
+                .orElseThrow(() -> new BereichMissingException("Bereich " + id + " fehlt."));
 
         for (PersonEntity person : bereich.getPersonen()) {
             person.getBereiche().remove(bereich);
