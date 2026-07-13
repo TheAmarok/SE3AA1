@@ -47,25 +47,25 @@ An das Projekt werden folgende Anforderungen gestellt:
 - [x] Bei H2 Verwendung muss das Datenmodell normalisiert sein.
 - [x] Catch Blöcke des Exception Handeling müssen den Zwischenfall immer loggen und wenn Sinnvoll den Benutzer darauf hinweisen.
 - [x] Import-Anweisungen gelten für Klassen, keine Wildcards mit *
-- [ ] Kommentare sollten vorhanden sein
-- [ ] Kommentare für ganze Methoden/Klassen/... als JavaDoc-Kommentar
+- [x] Kommentare sollten vorhanden sein
+- [x] Kommentare für ganze Methoden/Klassen/... als JavaDoc-Kommentar
 - [x] Commits müssen regelmäßig gepushed werden.
 - [ ] Quellcode wird in Moodle als ZIP abgegeben.
 - [x] Benennung muss gut verständlich sein.
 - [x] Gängige Benennungskonventionen werden beachtet.
     - UpperCamelCase für Klassennamen
     - lowerCamelCase für Variablen
-- [ ] Quellcodezeilen sind nie länger als 120 Zeichen
+- [x] Quellcodezeilen sind nie länger als 120 Zeichen
 - [x] Methoden haben <50 Zeilen
-- [ ] Einrückung & Leerzeichen sind einheitlich
+- [x] Einrückung & Leerzeichen sind einheitlich
 - [ ] Kein Duplicate Code
-- [ ] Keine Codeleichen
-- [ ] Alle Variablen müssen irgendwann ausgelesen/genutzt werden
+- [x] Keine Codeleichen
+- [x] Alle Variablen müssen irgendwann ausgelesen/genutzt werden
 - [x] Keine unnötigen Imports
 - [x] Klassen sind in Packages
 - [x] Jedes Package enthält mindestens zwei Klassen
 - [ ] Verwende @Override wann immer möglich
-- [ ] Keine deprecated Klassen & Methoden
+- [x] Keine deprecated Klassen & Methoden
 - [x] Einfache Datentransportklassen sind Records
 - [ ] Beachte Best Practices der Vorlesung
 - [x] Verwende kein Lombok
