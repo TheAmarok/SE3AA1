@@ -10,12 +10,34 @@
         th:object="${person}"
         method="post">
 
+    <h2>Person Eingeben</h2>
+
     <input type="hidden" th:field="*{person_id}">
 
-    <input th:field="*{name}" placeholder="Name">
-    <input th:field="*{anrede}" placeholder="Anrede">
-    <input th:field="*{kontaktdaten}" placeholder="Kontakt">
-    <input th:field="*{beschreibung}" placeholder="Beschreibung">
+    <p>
+      <label>
+        Name:
+        <input th:field="*{name}" placeholder="Name">
+      </label>
+    </p>
+    <p>
+      <label>
+        Anrede:
+        <input th:field="*{anrede}" placeholder="Anrede">
+      </label>
+    </p>
+    <p>
+      <label>
+        Kontakt:
+        <input th:field="*{kontaktdaten}" placeholder="Kontakt">
+      </label>
+    </p>
+    <p>
+      <label>
+        Beschreibung:
+        <input th:field="*{beschreibung}" placeholder="Beschreibung">
+      </label>
+    </p>
 
       <p><strong>Bereiche auswählen:</strong></p>
       <div th:each="bereich : ${bereiche}">

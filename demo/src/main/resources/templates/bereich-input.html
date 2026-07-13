@@ -10,11 +10,28 @@
           th:object="${bereich}"
           method="post">
 
+        <h2>Bereich Eingeben</h2>
+
         <input type="hidden" th:field="*{bereich_id}">
 
-        <input th:field="*{name}" placeholder="Name">
-        <input th:field="*{kontaktdaten}" placeholder="Kontakt">
-        <input th:field="*{beschreibung}" placeholder="Beschreibung">
+        <p>
+            <label>
+                Name:
+                <input th:field="*{name}" placeholder="Name">
+            </label>
+        </p>
+        <p>
+            <label>
+                Kontakt:
+                <input th:field="*{kontaktdaten}" placeholder="Kontakt">
+            </label>
+        </p>
+        <p>
+            <label>
+                Beschreibung:
+                <input th:field="*{beschreibung}" placeholder="Beschreibung">
+            </label>
+        </p>
 
         <button type="submit" >
             Speichern
