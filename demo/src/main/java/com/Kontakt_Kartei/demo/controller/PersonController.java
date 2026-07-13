@@ -38,11 +38,12 @@ public class PersonController {
         this._serviceB = serviceB;
     }
 
+    //Personen CRUD
+
     @GetMapping
     public String showAll(Model model) {
 
-        model.addAttribute("personen",
-                _serviceP.findAll());
+        model.addAttribute("personen", _serviceP.findAll());
 
         return "personen";
     }
@@ -50,20 +51,15 @@ public class PersonController {
     @GetMapping("/neue-person")
     public String showForm(Model model) {
 
-        model.addAttribute("person",
-                new PersonEntity());
-        model.addAttribute(
-                "bereiche",
-                _serviceB.findAll());
+        model.addAttribute("person", new PersonEntity());
+
+        model.addAttribute("bereiche", _serviceB.findAll());
 
         return "person-input";
     }
 
     @PostMapping("/speichern")
-    public String save(
-            @ModelAttribute PersonEntity person,
-            @RequestParam(required = false) List<Long> bereichIds) {
-
+    public String save(@ModelAttribute PersonEntity person, @RequestParam(required = false) List<Long> bereichIds) {
 
         Set<BereichEntity> bereiche = new HashSet<>();
 
@@ -74,6 +70,7 @@ public class PersonController {
                         .orElseThrow(() -> new BereichMissingException("Bereich " + id + " der Person fehlt."));
                 bereiche.add(bereich);
             }
+
         }
 
         person.setBereiche(bereiche);
@@ -84,39 +81,45 @@ public class PersonController {
     }
 
     @GetMapping("/bearbeiten/{id}")
-    public String edit(
-            @PathVariable Long id,
-            Model model) {
+    public String edit(@PathVariable Long id, Model model) {
 
         PersonEntity person = _serviceP.findById(id)
                 .orElseThrow(() -> new PersonMissingException("Person " + id + " fehlt."));
 
         model.addAttribute("person", person);
+
         model.addAttribute( "bereiche", _serviceB.findAll());
 
         return "person-input";
     }
 
     @GetMapping("/loeschen/{id}")
-    public String delete(
-            @PathVariable Long id) {
+    public String delete(@PathVariable Long id) {
 
         _serviceP.delete(id);
 
         return "redirect:/personen";
     }
 
+    //Exception Behandlung
+
     @ExceptionHandler(BereichMissingException.class)
     public String handleBereichMissing(BereichMissingException e, RedirectAttributes redirectAttributes) {
+
         log.warn("Fehler aufgerufen: {}", e.getMessage(), e);
+
         redirectAttributes.addFlashAttribute("error", "Bereich existiert nicht.");
+
         return "redirect:/fehler";
     }
 
     @ExceptionHandler(PersonMissingException.class)
     public String handlePersonMissing(PersonMissingException e, RedirectAttributes redirectAttributes) {
+
         log.warn("Fehler aufgerufen: {}", e.getMessage(), e);
+
         redirectAttributes.addFlashAttribute("error", "Person existiert nicht.");
+
         return "redirect:/fehler";
     }
 

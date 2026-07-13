@@ -15,6 +15,7 @@ import jakarta.persistence.ManyToMany;
 public class PersonEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private Long person_id;
 	
 	private String name;
@@ -26,7 +27,10 @@ public class PersonEntity {
 	@JoinTable(	name 				= "person_bereich",
 				joinColumns 		= @JoinColumn(name = "person_id"),
 				inverseJoinColumns 	= @JoinColumn(name = "bereich_id"))
-	private Set<BereichEntity> bereiche = new HashSet<BereichEntity>();
+
+	private Set<BereichEntity> bereiche = new HashSet<>();
+
+	//Get & Set Methoden, alle von Thymeleaf genutzt
 
 	public Long getPerson_id() {
 		return person_id;

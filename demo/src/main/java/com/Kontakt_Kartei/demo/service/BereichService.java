@@ -33,6 +33,16 @@ public class BereichService {
         return _datenbankB.findById(id);
     }
 
+    /**
+     * Löscht einen Bereich anhand seiner ID und entfernt zuvor alle zugewiesenen Personen.
+     * <p>
+     * Die Methode lädt den Bereich, entfernt die bidirektionalen Verknüpfungen
+     * in den betroffenen Personen-Entitäten zur Wahrung der referentiellen Integrität
+     * und löscht den Bereich anschließend aus der Datenbank.
+     *
+     * @param id Die ID des zu löschenden Bereichs.
+     * @throws BereichMissingException Wenn kein Bereich mit der angegebenen ID existiert.
+     */
     @Transactional
     public void delete(Long id) {
 

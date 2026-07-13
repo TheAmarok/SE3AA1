@@ -11,14 +11,17 @@
         <details>
             <summary th:text="${bereich.name}">
             </summary>
+
             <p>
                 <strong>Kontakt:</strong>
                 <span th:text="${bereich.kontaktdaten}"></span>
             </p>
+
             <p>
                 <strong>Beschreibung:</strong>
                 <span th:text="${bereich.beschreibung}"></span>
             </p>
+
             <p>
                 <button>
                     <a th:href="@{/bereich-bearbeiten/{id}(id=${bereich.bereich_id})}">
@@ -35,10 +38,12 @@
             <details th:each="person : ${bereich.personen}" style="margin-bottom: 15px;">
                 <summary th:text="${person.name}">
                 </summary>
+
                 <p>
                     <strong>Anrede:</strong>
                     <span th:text="${person.anrede}"></span>
                 </p>
+
                 <p>
                     <strong>Kontakt:</strong>
                     <span th:text="${person.kontaktdaten}"></span>
@@ -79,6 +84,7 @@
             </a>
         </button>
     </p>
+
     <button>
         <a th:href="@{/personen}">
             Personenliste

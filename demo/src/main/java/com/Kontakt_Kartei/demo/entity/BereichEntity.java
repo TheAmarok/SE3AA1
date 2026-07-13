@@ -13,6 +13,7 @@ import jakarta.persistence.ManyToMany;
 public class BereichEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private Long bereich_id;
 	
 	private String name;
@@ -20,14 +21,24 @@ public class BereichEntity {
 	private String beschreibung;
 	
 	@ManyToMany(mappedBy = "bereiche")
+
 	private Set<PersonEntity> personen = new HashSet<>();
 
+	/**
+	 * Entfernt alle zugewiesenen Personen, wenn dieser Bereich gelöscht wird.
+	 * <p>
+	 * Diese Methode stellt die referenzielle Integrität sicher, indem sie die
+	 * bidirektionale Verknüpfung auf der Gegenseite (Person) auflöst, bevor
+	 * die interne Liste der Personen geleert wird.
+	 */
 	public void removePersonen() {
 		for (PersonEntity person : personen) {
 			person.getBereiche().remove(this);
 		}
 		personen.clear();
 	}
+
+	//Get & Set Methoden, alle von Thymeleaf genutzt
 
 	public Long getBereich_id() {
 		return bereich_id;

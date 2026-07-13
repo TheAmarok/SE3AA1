@@ -5,9 +5,11 @@
     <title>Fehler</title>
 </head>
 <body>
+
     <h1>
         Ein Fehler ist aufgetreten.
     </h1>
+
     <!--/*@thymesVar id="error" type="java.lang.String"*/-->
     <div th:if="${error}" class="alert alert-danger" role="alert">
         <p th:text="${error}"></p>

@@ -20,18 +20,21 @@
         <input th:field="*{name}" placeholder="Name" required>
       </label>
     </p>
+
     <p>
       <label>
         Anrede:
         <input th:field="*{anrede}" placeholder="Anrede">
       </label>
     </p>
+
     <p>
       <label>
         Kontakt:
         <input th:field="*{kontaktdaten}" placeholder="Kontakt">
       </label>
     </p>
+
     <p>
       <label>
         Beschreibung:
@@ -42,6 +45,7 @@
     <p>
       <strong>Bereiche auswählen:</strong>
     </p>
+
     <div th:each="bereich : ${bereiche}" style="margin-bottom: 15px;">
       <label>
         <input type="checkbox"

@@ -45,8 +45,8 @@ An das Projekt werden folgende Anforderungen gestellt:
 #### Quellcode Anforderungen
 - [x] Code ist nicht KI-Generiert
 - [x] Bei H2 Verwendung muss das Datenmodell normalisiert sein.
-- [ ] Catch Blöcke des Exception Handeling müssen den Zwischenfall immer loggen und wenn Sinnvoll den Benutzer darauf hinweisen.
-- [ ] Import-Anweisungen gelten für Klassen, keine Wildcards mit *
+- [x] Catch Blöcke des Exception Handeling müssen den Zwischenfall immer loggen und wenn Sinnvoll den Benutzer darauf hinweisen.
+- [x] Import-Anweisungen gelten für Klassen, keine Wildcards mit *
 - [ ] Kommentare sollten vorhanden sein
 - [ ] Kommentare für ganze Methoden/Klassen/... als JavaDoc-Kommentar
 - [x] Commits müssen regelmäßig gepushed werden.
@@ -61,7 +61,7 @@ An das Projekt werden folgende Anforderungen gestellt:
 - [ ] Kein Duplicate Code
 - [ ] Keine Codeleichen
 - [ ] Alle Variablen müssen irgendwann ausgelesen/genutzt werden
-- [ ] Keine unnötigen Imports
+- [x] Keine unnötigen Imports
 - [x] Klassen sind in Packages
 - [x] Jedes Package enthält mindestens zwei Klassen
 - [ ] Verwende @Override wann immer möglich
