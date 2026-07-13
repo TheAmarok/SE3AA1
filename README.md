@@ -50,7 +50,7 @@ An das Projekt werden folgende Anforderungen gestellt:
 - [x] Kommentare sollten vorhanden sein
 - [x] Kommentare für ganze Methoden/Klassen/... als JavaDoc-Kommentar
 - [x] Commits müssen regelmäßig gepushed werden.
-- [ ] Quellcode wird in Moodle als ZIP abgegeben.
+- [x] Quellcode wird in Moodle als ZIP abgegeben.
 - [x] Benennung muss gut verständlich sein.
 - [x] Gängige Benennungskonventionen werden beachtet.
     - UpperCamelCase für Klassennamen
@@ -67,7 +67,7 @@ An das Projekt werden folgende Anforderungen gestellt:
 - [x] Verwende @Override wann immer möglich
 - [x] Keine deprecated Klassen & Methoden
 - [x] Einfache Datentransportklassen sind Records
-- [ ] Beachte Best Practices der Vorlesung
+- [x] Beachte Best Practices der Vorlesung
 - [x] Verwende kein Lombok
 
 #### Bewertungserleichterung
