@@ -39,15 +39,17 @@
       </label>
     </p>
 
-      <p><strong>Bereiche auswählen:</strong></p>
-      <div th:each="bereich : ${bereiche}">
-        <label>
-          <input type="checkbox"
-                 name="bereichIds"
-                 th:value="${bereich.bereich_id}"
-                 th:checked="${person.bereiche.contains(bereich)}">
-          <span th:text="${bereich.name}"></span>
-        </label>
+    <p>
+      <strong>Bereiche auswählen:</strong>
+    </p>
+    <div th:each="bereich : ${bereiche}" style="margin-bottom: 5px;">
+      <label>
+        <input type="checkbox"
+               name="bereichIds"
+               th:value="${bereich.bereich_id}"
+               th:checked="${person.bereiche.contains(bereich)}">
+        <span th:text="${bereich.name}"></span>
+      </label>
     </div>
 
     <button type="submit" >

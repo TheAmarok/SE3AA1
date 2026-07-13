@@ -23,7 +23,7 @@ An das Projekt werden folgende Anforderungen gestellt:
 - [x] Die Anwendung verwendet zwei Tabellen
 - [x] Create, Read, Update und Delete Operationen werden unterstützt.
 - [x] Daten sollen in Datei auf Festplatte/SSD geschrieben werden.
-- [ ] Das Datenmodell wird als Diagramm dargestellt und als PNG, SVG oder PDF im Repo Beigefügt.
+- [x] Das Datenmodell wird als Diagramm dargestellt und als PNG, SVG oder PDF im Repo Beigefügt.
 - [x] Eine (rein funktionale) HTML Benutzeroberfläche besteht. Dafür können verwendet werden:
     - Thymeleaf
     - Statische HTML-Seite mit RestController & REST-API
@@ -33,17 +33,17 @@ An das Projekt werden folgende Anforderungen gestellt:
 #### Bewertungskriterien
 - [x] Funktional Korrekt
 - [ ] Funktional Robust
-- [ ] Oberfläche besitzt konsistentes Aussehen
+- [x] Oberfläche besitzt konsistentes Aussehen
 - [x] Oberfläche muss gut bedienbar sein
 - [x] Zahlen & Datumsformate passen zur Sprache
-- [ ] Sicherheitsabfrage vor Löschoperation
-- [ ] Texte haben guten farblichen Kontrast
+- [x] Sicherheitsabfrage vor Löschoperation
+- [x] Texte haben guten farblichen Kontrast
 - [ ] Texte haben immer etwas Platz drum herum
-- [ ] Ungültige Eingaben werden sinnvoll behandelt
-- [ ] Bedienung ist Intuitiv
+- [x] Ungültige Eingaben werden sinnvoll behandelt
+- [x] Bedienung ist Intuitiv
 
 #### Quellcode Anforderungen
-- [ ] Code ist nicht KI-Generiert
+- [x] Code ist nicht KI-Generiert
 - [x] Bei H2 Verwendung muss das Datenmodell normalisiert sein.
 - [ ] Catch Blöcke des Exception Handeling müssen den Zwischenfall immer loggen und wenn Sinnvoll den Benutzer darauf hinweisen.
 - [ ] Import-Anweisungen gelten für Klassen, keine Wildcards mit *

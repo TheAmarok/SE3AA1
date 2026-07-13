@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Personen</title>
+    <style>
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
 
-    <table>
+    <table style = "width: 100%;" cellpadding="">
 
         <tr>
             <th>Name</th>
             <th>Anrede</th>
             <th>Kontakt</th>
             <th>Beschreibung</th>
+            <th>Aktionen</th>
         </tr>
 
         <tr th:each="person : ${personen}">
